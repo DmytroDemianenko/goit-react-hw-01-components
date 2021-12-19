@@ -1,28 +1,18 @@
 import PropTypes from 'prop-types';
-
-const Statistics = ({label, percentage}) => {
-  return(  
+// const items = { label, percentage };
+const Statistics = ({items}) => {
+  return (  
+    
   <section className="statistics">
   <h2 className="title">Upload stats</h2>
 
   <ul className="stat-list">
-    <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
-  </ul>
+    {items.map(item=> (<li className="item">
+          <span className="label">{item.label}</span>
+          <span className="percentage">{item.percentage}</span>
+    </li>))}
+        
+    </ul>
 </section>)
 }
 Statistics.propTypes = {
