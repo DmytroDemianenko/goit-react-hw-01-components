@@ -6,6 +6,8 @@ import StatisticsList from './components/Statistics/StatisticsList';
 import data from './components/Statistics/data.json';
 import FriendsList from './components/FriendList/FriendsList';
 import friends from './components/FriendList/friends.json';
+import TransactionHistory from './components/TrasactionHistory/TransactionHistory';
+import Transactions from './components/TrasactionHistory/transactions.json';
 //  import paintings from './painting.json';
 
  export default function App() {
@@ -19,6 +21,9 @@ import friends from './components/FriendList/friends.json';
          </Section>
          <Section>
              <FriendsList data={friends}/>
+         </Section>
+         <Section>
+             <TransactionHistory items={Transactions} />;
          </Section>
      </div>);
  }
