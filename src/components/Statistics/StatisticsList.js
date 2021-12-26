@@ -6,9 +6,9 @@ import s from './Statistics.module.css';
 function StatisticsList ({items})  {
   return (  
   
-  <ul className={s.list} key="id">
+  <ul className={s.list} >
             {items.map((item ) => (
-                  <Statistics label={item.label}
+                  <Statistics key={item.id} label={item.label}
                   percentage={item.percentage}/>
                   ))}
       </ul>

@@ -4,10 +4,10 @@ import style from "./FriendsList.module.css";
 function FriendsList ({data})  {
     return (
         
-        <ul className={style.friendList} key="id">
+        <ul className={style.friendList} key={data.id}>
               {data.map((item) =>
   (
-      <Friends avatar={item.avatar}
+      <Friends key={item.id} avatar={item.avatar}
                 name={item.name}
           isOnline={item.isOnline} />
   ))}

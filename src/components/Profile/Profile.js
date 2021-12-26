@@ -3,7 +3,7 @@ import s from './Profile.module.css';
 const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
     return (
      <div className={s.profile}>
-        <div class={s.description}>
+        <div className={s.description}>
     <img
       src={avatar}
       alt={username}
