@@ -14,11 +14,11 @@ import s from '../src/components/Statistics/Statistics.module.css';
  export default function App() {
      return (<div>
          <Section>
-             <Profile userName={user.username} tag={user.tag} location={user.location} avatar={user.avatar} followers={user.stats.followers} views={user.stats.views} likes={user.stats.likes}/>
+            <Profile userName={user.username} tag={user.tag} location={user.location} avatar={user.avatar} followers={user.stats.followers} views={user.stats.views} likes={user.stats.likes}/>
          </Section>
          <Section className={s.statistics}>
-             <h2 className={s.title}>Upload stats</h2>
-             <StatisticsList items={data} />
+            <StatisticsList title="Upload stats" items={data}/>
+             
          </Section>
          <Section>
              <FriendsList data={friends}/>
