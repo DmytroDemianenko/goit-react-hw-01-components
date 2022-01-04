@@ -2,9 +2,12 @@ import PropTypes from 'prop-types';
 import Statistics from './Statistics';
 import s from './Statistics.module.css';
 
-function StatisticsList({ title, items }) {
+function StatisticsList ({ title, items }) {
+
   return (
-    <ul className={s.list}>
+    <div>
+      { title && (<h2 className={s.title}> {title} </h2>) }
+      <ul className={s.list}>
       {items.map(item => (
         <Statistics
           key={item.id}
@@ -12,10 +15,12 @@ function StatisticsList({ title, items }) {
           percentage={item.percentage}
         />
       ))}
-    </ul>
-  );
+      </ul>
+      </div>
+  )
 }
 StatisticsList.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
+  items: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
 };
 export default StatisticsList;
