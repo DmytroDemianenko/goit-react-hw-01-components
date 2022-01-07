@@ -1,4 +1,3 @@
-//  import PaintingList from './components/PaintingList';
 import Profile from './components/Profile/Profile';
 import Section from './components/Section';
 import user from './components/Profile/user.json';
@@ -9,7 +8,6 @@ import friends from './components/FriendList/friends.json';
 import TransactionHistory from './components/TrasactionHistory/TransactionHistory';
 import Transactions from './components/TrasactionHistory/transactions.json';
 import s from '../src/components/Statistics/Statistics.module.css';
-//  import paintings from './painting.json';
 
 export default function App() {
   return (
